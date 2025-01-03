@@ -1,0 +1,9 @@
+Install OpenSSL if you don't already have it installed on your system
+Generate a private key:
+• openssl genpkey -algorithm RSA -out private.key
+
+• Generate a certificate signing request (CSR) using the private key:
+• openssl req -new -key private.key -out csr.csr
+
+• Generate a self-signed certificate using the private key and CSR:
+• openssl x509 -req -days 365 -in csr.csr -signkey private.key -out certificate.crt
