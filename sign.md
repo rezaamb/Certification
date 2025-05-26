@@ -9,7 +9,11 @@ openssl req -new -key client.key -out client.csr \
 
 ## مرحله 2: ارسال فایل .csr به CA
 فایل client.csr رو به شخص یا سازمان CA بده (مثلاً با ایمیل یا secure upload).
-
+```bash
+172.16.5.4 > p:Nn12345678910111213@
+web -> 172.16.5.4/certsrv
+choose "request a certificate" -> advanced -> copy .crt file there
+```
 اون فرد/سازمان فایل رو با CA خودش امضا می‌کنه و بهت برمی‌گردونه.
 
 
